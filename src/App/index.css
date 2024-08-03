@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.flex {
+  display: flex;
+}
+.center {
+  justify-content: center;
+  align-items: center;
+}
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+th,
+td {
+  border: 1px solid #ddd;
+    padding: 0;
+  min-height: 50px;
+}
+th {
+  background-color: #ececec;
+}
+
+.checked {
+  background-color: #e2f0f8;
+}
+.selection {
+ text-align: center;
+ vertical-align: middle;
+}
+
+.table_component{
+  position: relative;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.192)
+
+}
+.table {
+  width: 100%;
+  border-spacing: 0;
+   border-collapse: collapse;
+}
+.table_head{
+  position: sticky;
+  top: -1px;
+  z-index: 1;
+}
+.table_wrap {
+  min-width: 1000px;
+  position: relative;
+  height: 1000px;
+  overflow-y: auto;
+}
+
+.table_actions {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  right: -140px;
+  top: 0;
+}
+button {
+  padding: 10px;
+  border: none;
+  color: white;
+}
+button:disabled{
+  color: rgb(214, 214, 214);
+  filter: brightness(0.8);
+}
+input[type="checkbox"] {
+  transform: scale(1.5);
+}
+input[type="text"] {
+  font-size: x-large;
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+.delete_btn {
+  background-color: rgb(206, 111, 111);
+}
+.add_btn {
+  background-color: rgb(66, 170, 66);
+}
