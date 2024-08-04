@@ -1,4 +1,4 @@
-import { memo, useMemo, useState } from "react";
+import { memo, useEffect, useState } from "react";
 import { CompanySchema } from "../model/types/CompanySchema";
 import {
   handleCheckboxChange,
@@ -27,10 +27,13 @@ export const Company = memo(
         company.address === localCompany.address
       )
         return;
-     changeCompanyData(localCompany);
+      changeCompanyData(localCompany);
     };
+    useEffect(() => {
+      setLocalCompany(company);
+    }, [company]);
     return (
-      <tr key={company.id} className={company.checked ? "checked" : ""}>
+      <tr className={company.checked ? "checked" : ""}>
         <td className="selection">
           <input
             type="checkbox"

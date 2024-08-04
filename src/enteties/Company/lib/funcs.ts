@@ -9,9 +9,9 @@ export const useFuncs = () => {
   const dispatch = useDispatch();
   const companies = useSelector(getCompanies);
   const hasMore = useSelector(getHasMore);
-  const handleCheckboxChange = (id: number) => {
+  const handleCheckboxChange = useCallback((id: number) => {
     dispatch(companiesActions.toggleChecked(id));
-  };
+  },[dispatch]);
   const loadMoreCompanies = useCallback(() => {
     if (hasMore) {
       dispatch(

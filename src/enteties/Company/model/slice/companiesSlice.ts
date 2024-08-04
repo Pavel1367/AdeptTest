@@ -46,6 +46,9 @@ const companySlice = createSlice({
       if (company) {
         company.checked = !company.checked;
       }
+      if (state.companies.some(company => !company.checked)) {
+        state.areAllSelected = false
+      }
     },
     addNewCompany: (state, action: PayloadAction<CompanySchema>) => {
       const newCompany = action.payload;
